@@ -1,0 +1,307 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="~/css/swiper.min.css" rel="stylesheet" />
+<script src="~/js/swiper.min.js"></script>
+
+
+<link href="~/css/style.css" rel="stylesheet" />
+@*<div class="er_cont_banner">
+        <div class="er_sombra">
+            <h1>Houses In Perú</h1>
+            <p>Bienes Inmuebles</p>
+            <hr />
+            <div class="er_cont_banner_link">
+                <a href="">Inicio</a>
+                <a href="">Comprar</a>
+                <a href="">Alquilar</a>
+            </div>
+        </div>
+    </div>*@
+
+<div id="carouselpag" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        <li data-target="#carouselpag" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselpag" data-slide-to="1"></li>
+        <li data-target="#carouselpag" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="~/images/casa1.jpg" alt="" width="500" height="500">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Propiedad ...</h3>
+                <p>Precio</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="d-block w-100" src="~/images/casa2.jpg" alt="" width="500" height="500">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Propiedad</h3>
+                <p>Precio</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="d-block w-100" src="~/images/casa3.jpg" alt="" width="500" height="500">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Propiedad</h3>
+                <p>Precio</p>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#carouselpag" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <a href="#carouselpag" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+<div class="er_cont_banner">
+    <div class="er_sombra">
+        <h1>Houses In Perú</h1>
+        <p>Bienes Inmuebles</p>
+        <hr />
+        <form class="er_cont_banner_link">
+            <i>
+                <label>Ubicacion</label>
+                <select class="custom-select">
+                    <option selected="selected">Seleccionar</option>
+                    <option>Lima</option>
+                    <option>Cajamarca</option>
+                    <option>Trujillo</option>
+                </select>
+            </i>
+            <i>
+                <label>Tipo de Propiedad</label>
+                <select class="custom-select">
+                    <option selected="selected">Seleccionar</option>
+                    <option>Casa</option>
+                    <option>Departamento</option>
+                    <option>Local</option>
+                    <option>Oficina</option>
+                    <option>Terreno</option>
+                </select>
+
+            </i>
+            <i>
+                <label>Estado</label>
+                <select class="custom-select">
+                    <option selected="selected">Seleccionar</option>
+                    <option>Alquiler</option>
+                    <option>Venta</option>
+                </select>
+
+            </i>
+            <div>
+                <a>Buscar</a>
+            </div>
+
+        </form>
+        <div>
+            <h2>Houses in Peru</h2>
+            <label>
+                Somos una agencia inmobiliaria, ofrecemos servicios de compra - venta de inmuebles,
+                alquileres, tasaciones y consultoría. Nuestra misión es buscar soluciones inmobiliarias para
+                que personas, empresas, instituciones e inversionistas desarrollen su actividad en las mejores condiciones.
+            </label>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="er_cont_carrousel">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid center-block" src="~/images/carousel.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel1.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel2.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel3.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel4.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel5.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel6.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top " src="~/images/carousel7.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="~/images/carousel8.jpg" alt="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">title 1</h4>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a class="btn btn-lg btn-info text-light text-capitalize">Ver Inmueble</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+
+
+</div>
+
+
+<div class="card-group">
+    <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">SIGUENOS EN</h5>
+            <hi></hi>
+            <div class="facebook button">
+                <i class="icon_redes">
+                    <i class="fa fa-facebook"></i>
+                </i>
+                <div class="slide_redes">
+                    <p>
+                        Facebook
+                    </p>
+                </div>
+                <iframe src="" width="62" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">NAVEGACIÓN</h5>
+            <p><a href="">Inicio</a></p>
+            <p><a href="">Compra</a></p>
+            <p><a href="">Alquiler</a></p>
+            <p><a href="">Acerca de Nosotros</a></p>
+            <p><a href="">Publicar Inmueble</a></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="card-body " style="width: 18rem;">
+            <h5 class="card-title">PROPIEDADES DESTACADAS</h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="card-body" style="width: 18rem;">
+            <h5 class="card-title">CONTACTO</h5>
+            <p class="card-text">Las gardenias Mz.A13 - Lt 57. Primera Etapa. Ate - Lima.</p>
+            <p class="card-text">Jr. dos de Mayo 569 of. 3. Cajamarca.</p>
+            <p class="card-text">Tf: 076 - 268675.</p>
+            <p class="card-text">Cel: 959 464 567.</p>
+            <p class="card-text">Cel: 976 505 738</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            }
+        }
+    });
+
+    function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+        return direction;
+    }
+</script>

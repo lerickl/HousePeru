@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>@ViewData["Title"] - HousesInPeru</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/keyframes.css" />
+    <link rel="stylesheet" href="~/css/banner.css" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/botones.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <div include-cshtml="/Usuario/Registro"></div>
+    <div include-html="/Usuario/Login"></div>
+
+</head>
+<body>
+
+    <header>
+        <nav class="ewk_navbar navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href=""><img src="~/images/logo.gif" />HOUSES IN PERÚ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">Venta</a>
+                            <a class="dropdown-item" href="">Alquiler</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="">Transacciones</a>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <div>
+                    <ul class="nav navbar-right">
+                        <li class="nav navbar-nav mr-auto">
+                            <a class="nav-link" href=""><span class="glyphicon glyphicon-home">Publicar Inmueble</span></a>
+                            <a class="nav-link" href="" data-toggle="modal" data-target="#Registro"><span class="glyphicon glyphicon-user">Registrarse</span></a>
+                            <a class="nav-link" href="" data-toggle="modal" data-target="#LogIn"><span class="glyphicon glyphicon-log-in">Ingresar</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+
+
+    </header>
+
+
+    @RenderBody()
+   
+            <footer>
+                <p>&copy; 2020 - HousesInPeru</p>
+            </footer>
+
+
+
+
+    <script>
+
+        function includeHTML() {
+            var z, i, elmnt, file, cshtml;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    cshtml = new XMLHttpRequest();
+                    cshtml.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("include-html");
+
+                        }
+                    }
+                    cshtml.open("GET", file, true);
+                    cshtml.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+        function includecsHTML() {
+            var z, i, elmnt, file, cshtml;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("include-cshtml");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    cshtml = new XMLHttpRequest();
+                    cshtml.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("include-cshtml");
+
+                        }
+                    }
+                    cshtml.open("GET", file, true);
+                    cshtml.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+        includecsHTML();
+        includeHTML();
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script src="~/lib/jquery/jquery3.4.1/jquery.js"></script>
+    <script src="~/lib/bootstrap/css/bootstrap.min.css"></script>
+    <script src="~/js/index.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
